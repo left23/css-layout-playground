@@ -1,2 +1,2 @@
-# flexbox-playground
-For quick layout experiments in html and css
+# css-layout-playground
+For quick HTML and CSS layout experiments and comparisons, using flexbox and CSS grids
