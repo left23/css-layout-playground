@@ -1,0 +1,189 @@
+:root {
+  --c-bg: #555B64;
+  --c-bg-1: #434A54;
+  --c-bg-2: #3A414C;
+  --c-bg-3: #333A45;
+}
+
+.signpost {
+    background-color: var(--c-bg);
+    color: white;
+}
+
+.signpost__title {
+  background: var(--c-bg);
+  padding: 2rem 5rem 2rem 3rem;
+}
+
+/* this means it's always in a column on the left side, not a row above the list
+.signpost__title {
+  flex: 0 1 16rem;
+}
+
+.signpost__container {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  justify-items: stretch;
+}
+*/
+
+.signpost h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.signpost__items > * {
+  background-color: var(--c-bg-2);
+  padding: 2rem 5rem 4rem 5rem;
+  margin: 0;
+  position: relative;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.signpost__items > *::before {
+  content: '2';
+  color: #F8F8FB;
+  font-size: 4rem;
+  position: absolute;
+  display: block;
+  opacity: 0.1;
+  top: 0;
+  left: 1rem;
+}
+
+.signpost__items > *:first-child {
+  background-color: var(--c-bg-1);
+}
+
+.signpost__items > *:first-child::before {
+  content: '1';
+}
+
+.signpost__items > *:last-child {
+  background-color: var(--c-bg-3);
+}
+
+.signpost__items > *:last-child::before {
+  content: '3';
+}
+
+
+
+
+
+@media (min-width: 600px) {
+
+  .signpost__container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  .signpost__title {
+    padding: 4rem 5rem 8rem 3rem;
+    flex: 0 1 370px;
+  }
+
+  .signpost__items {
+    flex: 0 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+
+  .signpost__items > * {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 4rem 5rem 4rem 5rem;
+    flex: 1 0 auto;
+  }
+
+  .signpost__items > *::before {
+    top: 1rem;
+    left: 1rem;
+    font-size: 5rem;
+    padding-bottom: 60px;
+  }
+
+}
+
+
+@media(min-width: 1000px) {
+
+  .signpost__title {
+    padding: 4rem 5rem 8rem 3rem;
+    flex: 0 1 500px;
+  }
+
+  .signpost h2 {
+    font-size: 2.125rem;
+  }
+
+ .signpost__items {
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .signpost__items > * {
+    padding: 12rem 2rem 5rem 4rem;
+    min-height: 500px;
+    flex: 1 0 33%;
+  }
+
+  .signpost__items > *::before {
+    top: 1rem;
+    left: 1rem;
+    font-size: 12rem;
+    padding-bottom: 60px;
+  }
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+  .signpost__container {
+    flex-wrap: nowrap;
+  }
+
+  .signpost__title {
+    padding: 8rem 10rem 16rem 6rem;
+  }
+
+  .signpost h2 {
+    font-size: 3.125rem;
+  }
+
+  .signpost__items > * {
+    padding: 16rem 2rem 5rem 4rem;
+    min-height: 610px;
+  }
+
+  .signpost__items > *::before {
+    top: 3rem;
+    font-size: 16rem;
+  }
+
+}
